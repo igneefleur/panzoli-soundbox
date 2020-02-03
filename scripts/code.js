@@ -59,7 +59,7 @@ canvas.addEventListener('click', function(){
         audio = document.querySelector(pause)
         audio.play()
         
-        alert(
+        
 
       }
     }
