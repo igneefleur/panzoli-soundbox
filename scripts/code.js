@@ -4,6 +4,7 @@ const largeur = canvas.width = window.innerWidth;
 const hauteur = canvas.height = window.innerHeight;
 const dessin = canvas.getContext('2d');
 
+var pause = '#move_left'
 var audios = [["move_left", "plus_vite", "pression1"],
               ["pression2", "alone", "consigne"],
               ["consigne2", "finish", "marteau"]]
@@ -50,7 +51,11 @@ canvas.addEventListener('click', function(){
         dessin.fillStyle = 'rgb(' + couleur + ')';
         dessin.fillRect(j * largeur / 3, i * hauteur / 3, largeur / 3, hauteur / 3)
 
-        var audio = document.querySelector('#' + audios[i][j])
+        var audio = document.querySelector(pause)
+        audio.pause()
+        
+        pause = '#' + audios[i][j]
+        audio = document.querySelector(pause)
         audio.play()
       }
     }
