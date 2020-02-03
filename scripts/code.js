@@ -57,6 +57,7 @@ canvas.addEventListener('click', function(){
         pause = '#' + audios[i][j]
         audio = document.querySelector(pause)
         audio.play()
+        alert(1)
       }
     }
   }
