@@ -53,10 +53,13 @@ canvas.addEventListener('click', function(){
 
         var audio = document.querySelector(pause)
         audio.pause()
+        audio.currentTime = 0
         
         pause = '#' + audios[i][j]
         audio = document.querySelector(pause)
         audio.play()
+        
+        alert(1)
 
       }
     }
